@@ -1,0 +1,58 @@
+
+.App {
+  text-align: center;
+  display: block;
+
+  $dark: #524bb3;
+  $light: white;
+  $hover-color: #1e1684;
+
+  .btn {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    font-weight: bold;
+
+    &:focus {
+      outline: none;
+      box-shadow: 1px 1px 6px 1px $dark;
+    }
+
+    &-primary {
+      color: $light;
+      background: $dark;
+
+      .spinner div {
+        border: 3px solid $light;
+        border-color: $light transparent transparent transparent;
+      }
+
+      &:hover {
+        background: $hover-color;
+      }
+    }
+
+    &-secondary {
+      color: $dark;
+      background: $light;
+      border: solid 2px $dark;
+
+      .spinner div {
+        border: 3px solid $dark;
+        border-color: $dark transparent transparent transparent;
+      }
+
+      &:hover {
+        color: $hover-color;
+        border: solid 2px $hover-color;
+      }
+    }
+
+    &-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
